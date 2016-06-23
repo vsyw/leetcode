@@ -13,9 +13,9 @@ Multiply out the brackets and rearrange a bit; you get:
 
 That first bracket – I don’t know what it is and I don’t really care, except that it’s a multiple of 9 – each of the numbers added if in there is clearly a multiple of 9. The second bracket is… just the sum of the digits, which is 15 – or 6 (modulo 9). If you do a quick check, 12,345 is indeed the same as 6 (modulo 9).
  */
-var addDigits = function(num) {
-    if (num === 0) return 0;
-    else {
-        return num % 9 === 0 ? 9 : num % 9;
-    }
+var addDigits = function (num) {
+  if (num === 0) return 0;
+  else {
+    return num % 9 === 0 ? 9 : num % 9;
+  }
 };

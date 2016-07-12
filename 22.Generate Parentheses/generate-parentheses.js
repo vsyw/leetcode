@@ -8,7 +8,7 @@ function addParenthesis(arr, str, n, m) {
     return;
   }
   if (m > 0) addParenthesis(arr, str + ')', n, m - 1);
-  if (n > 0) addParenthesis(arr, str + '(', n-1, m + 1);
+  if (n > 0) addParenthesis(arr, str + '(', n - 1, m + 1);
 }
 
 var generateParenthesis = function(n) {

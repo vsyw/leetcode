@@ -10,12 +10,12 @@ function backtrack(ans, comb, candidates, target, start) {
     return;
   }
   for (let i = start; i < candidates.length; i++) {
-    // if (i > start && candidates[i] === candidates[i - 1]) continue;
+    if (i > start && candidates[i] === candidates[i - 1]) continue;
     comb.push(candidates[i]);
     backtrack(ans, comb, candidates, target - candidates[i], i + 1);
     comb.pop();
   }
-} 
+}
 
 var combinationSum2 = function(candidates, target) {
   let ans = [];
@@ -23,7 +23,6 @@ var combinationSum2 = function(candidates, target) {
   candidates.sort((a, b) => {
     return a <= b ? -1 : 1;
   });
-  console.log(candidates);
   backtrack(ans, comb, candidates, target, 0);
   return ans;
 };

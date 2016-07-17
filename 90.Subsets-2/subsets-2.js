@@ -9,6 +9,7 @@ function backtrack(ans, set, nums, start) {
   // }
   ans.push(set.slice());
   for (let i = start; i < nums.length; i++) {
+    if (i > start && nums[i] === nums[i - 1]) continue;
     set.push(nums[i]);
     backtrack(ans, set.slice(), nums, i + 1);
     set.pop();
@@ -25,7 +26,7 @@ var subsetsWithDup = function(nums) {
   return ans;
 };
 
-console.log(subsetsWithDup([1, 2]));
+console.log(subsetsWithDup([1, 2, 2, 3]));
 
 // [2,3,4,5]
 

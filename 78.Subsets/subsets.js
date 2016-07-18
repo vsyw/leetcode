@@ -2,6 +2,9 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
+// relative solutions:
+// https://discuss.leetcode.com/topic/46159/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning/2
+
 function backtrack(ans, set, nums, start) {
   // if (start === nums.length) {
   //   ans.push(set.slice());

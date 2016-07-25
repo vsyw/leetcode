@@ -19,6 +19,6 @@ const getSum = function (a, b) {
   let carry = (a & b) << 1;
   a = a ^ b;
   return getSum(a, carry);
-// }
+}
 
 console.log(getSum(10, -3));

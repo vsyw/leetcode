@@ -29,9 +29,3 @@ var subsetsWithDup = function(nums) {
 console.log(subsetsWithDup([1, 2, 2, 3]));
 
 // [2,3,4,5]
-
-
-// 1,2
-// 1, ,
-//  ,2,
-//  , , 

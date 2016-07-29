@@ -1,6 +1,7 @@
 /**
  * @param {number[]} citations
  * @return {number}
+ * https://zh.wikipedia.org/wiki/H%E6%8C%87%E6%95%B0
  */
 const hIndex = function (citations) {
   citations.sort((a, b) => {
@@ -8,11 +9,9 @@ const hIndex = function (citations) {
   });
   let h = 0;
   console.log(citations);
-  for (let i = citations.length - 1; i >= 0; i--) {
-    if (citations.length - i <= citations[i]) {
-      h = citations.length - i;
-      return h;
-    }
+  for (let i = 0; i <= citations.length; i++) {
+    const curH = Math.min(citations[i], citations.length - i);
+    if (curH > h) h = curH;
   }
   return h;
 };

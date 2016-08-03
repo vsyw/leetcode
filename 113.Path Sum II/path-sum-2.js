@@ -11,16 +11,16 @@
  * @return {number[][]}
  */
 function traverse(root, sum, backtrack, ans) {
-  if (root) {
-    backtrack.push(root.val);
-    if (root.left === null && root.right === null && root.val === sum) {
-      ans.push(backtrack.slice());
-    }
-    traverse(root.left, sum - root.val, backtrack, ans);
-    traverse(root.right, sum - root.val, backtrack, ans);
-    backtrack.pop();
+  if (!root) return;
+  backtrack.push(root.val);
+  if (root.left === null && root.right === null && root.val === sum) {
+    ans.push(backtrack.slice());
   }
+  traverse(root.left, sum - root.val, backtrack, ans);
+  traverse(root.right, sum - root.val, backtrack, ans);
+  backtrack.pop();
 }
+
 
 const pathSum = function (root, sum) {
   const backtrack = [];

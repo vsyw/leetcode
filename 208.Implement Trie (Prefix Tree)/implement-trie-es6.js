@@ -44,5 +44,5 @@ class TrieNode {
 }
 
 const head = new TrieNode();
-head.insert('fuck');
-console.log(head.search('fuc'));
+head.insert('幹你娘 老機吧');
+console.log(head.startsWith('幹你娘'));

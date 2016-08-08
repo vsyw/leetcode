@@ -3,13 +3,13 @@
  * @param {number} target
  * @return {number}
  */
-var threeSumClosest = function(nums, target) {
-  var ans = Number.MAX_VALUE;
-  var minV = Number.MAX_VALUE;
+const threeSumClosest = function (nums, target) {
+  const ans = Number.MAX_VALUE;
+  const minV = Number.MAX_VALUE;
   nums.sort((a, b) => {
     return a > b ? 1 : -1;
-  })
-  for (var i = 0; i < nums.length; i++) {
+  });
+  for (let i = 0; i < nums.length; i++) {
     var beg = i+1, end = nums.length-1;
     // console.log('beg ', beg, '', 'end ', end);
     while(beg < end) {

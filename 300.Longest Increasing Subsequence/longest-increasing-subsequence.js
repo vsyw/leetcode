@@ -4,16 +4,20 @@
  */
 const lengthOfLIS = function (nums) {
   if (nums.length <= 0) return 0;
-  const length = new Array(nums.length).fill(1);
+  const length = nums.map((item) => {
+    return [item];
+  });
+  console.log(length);
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < i; j++) {
-      if (nums[i] > nums[j]) {
-        length[i] = Math.max(length[i], length[j] + 1);
+      if (nums[i] > nums[j] && length[i].length < length[j].length + 1) {
+        console.log('shit');
+        length[i] = [...length[j], nums[i]];
       }
     }
   }
-  // console.log(length);
+  console.log(length);
   return Math.max(...length);
 };
 
-console.log(lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]));
+console.log(lengthOfLIS([2, 5, 3, 7, 101, 18]));

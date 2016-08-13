@@ -9,7 +9,7 @@ const isPerfectSquare = function (num) {
   let right = num;
   while (left <= right) {
     const mid = Math.floor(right + (left - right) / 2);
-    console.log(left, right, mid);
+    // console.log(left, right, mid);
     if (mid * mid === num) return true;
     else if (mid * mid > num) {
       right = mid - 1;
@@ -19,5 +19,6 @@ const isPerfectSquare = function (num) {
   }
   return false;
 };
-
+const [a1, a2, fuck] = process.argv;
+console.log('arg', fuck);
 console.log(isPerfectSquare(104976));

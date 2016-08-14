@@ -9,12 +9,13 @@ const productExceptSelf = function (nums) {
     product *= nums[i - 1];
     products.push(product);
   }
+  console.log(products);
   product = 1;
   for (let i = nums.length - 2; i >= 0; i--) {
     product *= nums[i + 1];
-    products[i] = product;
+    products[i] *= product;
   }
   return products;
 };
 
-console.log(productExceptSelf([0, 0]));
+console.log(productExceptSelf([9, 0, -2]));

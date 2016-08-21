@@ -10,7 +10,7 @@
  * @return {number[]}
  */
 
-const inorderTraversal = function (root) {
+const preorderTraversal = function (root) {
   const result = [];
   const stack = [];
 
@@ -18,12 +18,15 @@ const inorderTraversal = function (root) {
 
   while (cur !== null || stack.length > 0) {
     while (cur !== null) {
-      stack.push(cur);
+      result.push(cur.val);
+      if (cur.right !== null) {
+        stack.push(cur.right);
+      }
       cur = cur.left;
+      if (cur === null && stack.length > 0) {
+        cur = stack.pop();
+      }
     }
-    cur = stack.pop();
-    result.push(cur.val);
-    cur = cur.right;
   }
 
   return result;

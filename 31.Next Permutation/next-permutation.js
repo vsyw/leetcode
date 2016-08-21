@@ -14,7 +14,7 @@ const nextPermutation = function (nums) {
     i--;
   }
   // i = i - 1;
-  console.log('fuck',i);
+  // console.log('fuck',i);
   if (i < 0) {
     nums.sort((a, b) => a - b);
     return nums;

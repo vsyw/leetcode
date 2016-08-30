@@ -10,6 +10,7 @@
  * @param {number} n
  * @return {ListNode}
  * 雙頭龍，一快一慢向前衝
+ * http://blog.csdn.net/kenden23/article/details/16980197
  */
 const removeNthFromEnd = function (head, n) {
   if (head === null) return head;

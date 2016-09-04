@@ -3,7 +3,7 @@
  * @return {number}
  */
 const findDuplicate = function (nums) {
-  let left = 0, right = nums.length - 1;
+  let left = 1, right = nums.length - 1;
   while (left < right) {
     let mid = Math.floor(left + (right - left) / 2);
     let count = 0;
@@ -15,9 +15,9 @@ const findDuplicate = function (nums) {
     } else {
       right = mid;
     }
-    return left;
   }
+  return left;
 };
 
 // console.log(binarySearch([1,3,2], 2));
-console.log(findDuplicate([1, 3, 2, 2]));
+console.log(findDuplicate([1, 2, 3, 1]));

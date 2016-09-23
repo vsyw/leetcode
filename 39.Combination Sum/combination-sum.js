@@ -14,8 +14,6 @@ function backtrack(candidates, target, index, tmpRes, res) {
     if (i > index && candidates[i] === candidates[i - 1]) continue;
     if (candidates[i] <= target) {
       tmpRes.push(candidates[i]);
-      console.log(tmpRes);
-      console.log(i);
       backtrack(candidates, target - candidates[i], i, tmpRes.slice(), res);
       tmpRes.pop();
     }
@@ -24,7 +22,6 @@ function backtrack(candidates, target, index, tmpRes, res) {
 
 const combinationSum = function (candidates, target) {
   candidates.sort((a, b) => a - b);
-  let sum = 0;
   const tmpRes = [];
   const res = [];
   backtrack(candidates, target, 0, tmpRes, res);

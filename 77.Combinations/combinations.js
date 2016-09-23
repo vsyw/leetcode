@@ -5,7 +5,6 @@
  */
 function backtrack(n, k, tmp, res, start) {
   if (tmp.lenth > k) return;
-  // console.log(tmp.length);
   if (tmp.length === k) {
     res.push(tmp);
     return;
@@ -24,4 +23,4 @@ const combine = function (n, k) {
   return res;
 };
 
-console.log(combine(4, 3));
+console.log(combine(4, 4));

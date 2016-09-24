@@ -18,13 +18,12 @@ function goRob(nums) {
 }
 
 const rob = function (nums) {
+  if (nums.length <= 1) return nums.length === 0 ? 0 : nums[0];
   const v1 = nums.slice();
   const v2 = nums.slice();
   v1.shift();
   v2.pop();
-  console.log(v1, v2);
   return Math.max(goRob(v1), goRob(v2));
 };
 
-console.log(rob([1, 2,10, 3, 5, 29]
-));
+console.log(rob([1]));

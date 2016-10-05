@@ -12,12 +12,11 @@ const charCount = function (str, char) {
 };
 
 const longestSubstring = function (s, k) {
-  let chars = new Set([...s]);
-  chars = [...chars];
-
-  for (let i = 0; i < chars.length; i++) {
-    if (charCount(s, chars[i]) < k) {
-      const splitted = s.split(chars[i]);
+  const chars = new Set([...s]);
+  
+  for (const c of chars) {
+    if (charCount(s, c) < k) {
+      const splitted = s.split(c);
       return Math.max(...splitted.map((str) => {
         return longestSubstring(str, k);
       }));

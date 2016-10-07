@@ -5,6 +5,7 @@
  *     this.y = y;
  * }
  */
+ // reference: http://fisherlei.blogspot.tw/2013/12/leetcode-max-points-on-line-solution.html
 /**
  * @param {Point[]} points
  * @return {number}

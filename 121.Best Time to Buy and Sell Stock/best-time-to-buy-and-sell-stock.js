@@ -3,16 +3,15 @@
  * @return {number}
  */
 const maxProfit = function (prices) {
-  const dp = [0];
-  for (let i = 1; i < prices.length; i++) {
-    if (prices[i] - prices[i - 1] > 0) {
-      dp[i] = dp[i - 1] + prices[i] - prices[i - 1];
-    } else {
-      dp[i] = 0;
+  let maxProf = 0;
+  let minPrice = Number.MAX_SAFE_INTEGER;
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] < minPrice) minPrice = prices[i];
+    if (prices[i] - minPrice > maxProf) {
+      maxProf = prices[i] - minPrice;
     }
   }
-  console.log(dp);
-  return Math.max(...dp);
+  return maxProf;
 };
 
 console.log(maxProfit([7,1,5,3,6,4]));

@@ -9,7 +9,7 @@ const findMin = function (nums) {
   while (start < end) {
     if (nums[start] < nums[end]) return nums[start];
     const mid = start + Math.floor((end - start) / 2);
-    if (nums[mid] >= nums[start]) {
+    if (nums[mid] >= nums[end]) {
       start = mid + 1;
     } else {
       end = mid;
@@ -17,6 +17,3 @@ const findMin = function (nums) {
   }
   return nums[start];
 };
-
-console.log(findMin([1, 2, 3, 4, 0]));
-

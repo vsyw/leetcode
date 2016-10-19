@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {string}
+ * references https://www.hrwhisper.me/leetcode-remove-duplicate-letters/
  */
 const removeDuplicateLetters = function (s) {
   if (s.length <= 0) return s;

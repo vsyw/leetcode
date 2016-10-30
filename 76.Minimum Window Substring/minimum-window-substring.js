@@ -11,7 +11,7 @@ const minWindow = function (s, t) {
   let counter = t.length;
   let d = Number.MAX_SAFE_INTEGER;
   let head = 0;
-  console.log(map);
+  // console.log(map);
   while (end < s.length) {
     if (map[s[end++].charCodeAt(0)]-- > 0) counter--;
     while (counter === 0) {

@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
+ * http://bookshadow.com/weblog/2015/07/18/leetcode-sliding-window-maximum/
  */
 
 // deque 用來記錄 index，確保最左邊的element 是在 k 範圍內

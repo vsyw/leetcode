@@ -14,8 +14,6 @@ const simplifyPath = function (path) {
   }
   if (stack.length === 0) return '/';
   return stack.join('');
-  // console.log(stack.join(''));
-  // return p;
 };
 
 console.log(simplifyPath('/home//foo/'));

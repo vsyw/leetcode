@@ -10,19 +10,13 @@
  * @return {string[]}
  */
 const traverse = function (node, tmp, res) {
-  if (!node) return;
-  if (node && node.left === null && node.right === null) {
-    tmp += tmp.length ? `->${node.val}` : node.val;
-    res.push(tmp);
-    return;
-  }
-  tmp += tmp.length ? `->${node.val}` : node.val;
-  traverse(node.left, tmp, res);
-  traverse(node.right, tmp, res);
+  if (root.left === null && root.right === null) res.push(tmp + node.val);
+  if (root.left !== null) traverse(node.left, tmp + node.val + '->', res);
+  if (root.right !== null) traverse(node.right, tmp + node.val + '->', res);
 };
 
 const binaryTreePaths = function (root) {
   const res = [];
-  traverse(root, '', res);
+  if (root) traverse(root, '', res);
   return res;
 };

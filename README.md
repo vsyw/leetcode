@@ -1,7 +1,4 @@
 # leetcode
 #My solution set for Leetcode.
-I'm awesome 
+Using Javascript ECMA2016 
 
-
-JavaScript solutions
-Kk

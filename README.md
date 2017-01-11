@@ -1,4 +1,4 @@
 # leetcode
 #My solution set for Leetcode.
-Using Javascript ECMA2016 
+Using Javascript ECMA2015
 

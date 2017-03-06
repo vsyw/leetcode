@@ -10,15 +10,14 @@
  * @return {boolean}
  */
 function depth(root) {
-  if (!root) return 0;
-  const left = depth(root.left);
-  const right = depth(root.right);
-  if (Math.abs(left - right) > 1 || left === -1 || right === -1) {
-    return -1;
-  }
-  return Math.max(left, right) + 1;
+  if (root === null) return 0;
+  return Math.max(depth(root.left) + 1, depth(root.right) + 1);
 }
 
 const isBalanced = function (root) {
-    if (!root) return true;
+  if (root === null) return true;
+  const left = depth(root.left);
+  const right = depth(root.right);
+
+  return Math.abs(left - right) <= 1 && isBalanced(root.left) && isBalanced(root.right);
 };
